@@ -37,26 +37,68 @@
 //   return "TEXTIO: " + formatter(formatter(formatter(message)));
 // }
 // export { reformat };
+//
+// // scope
+// function getMessageStatus(message) {
+//   let messageStatus = "processing";
+//
+//   function isValidLength(message) {
+//     let messageStatus = "invalid";
+//
+//     if (message.length > 0) {
+//       messageStatus = "valid";
+//     }
+//
+//     return messageStatus;
+//   }
+//
+//   // don't touch above this line
+//
+//   return isValidLength(message);
+// }
+//
+// // don't touch below this line
+//
+// export { getMessageStatus };
 
-// scope
-function getMessageStatus(message) {
-  let messageStatus = "processing";
+// function printReports(intro, body, outro) {
+//   printCostReport(function (message) {
+//     return message.length * 2;
+//   }, intro);
+//   printCostReport(function (message) {
+//     return message.length * 3;
+//   }, body);
+//   printCostReport(function (message) {
+//     return message.length * 4;
+//   }, outro);
+// }
+//
+// // don't touch below this line
+//
+// function printCostReport(costCalculator, message) {
+//   const cost = costCalculator(message);
+//   console.log(`Message: "${message}" Cost: ${cost} cents`);
+// }
+//
+// printReports(
+//   "Welcome to the Hotel California",
+//   "Such a lovely place",
+//   "Plenty of room at the Hotel California",
+// );
 
-  function isValidLength(message) {
-    let messageStatus = "invalid";
-
-    if (message.length > 0) {
-      messageStatus = "valid";
-    }
-
-    return messageStatus;
+function createContact(
+  phoneNumber,
+  name = "Anonymous",
+  avatar = "default.jpg",
+) {
+  if (!phoneNumber) {
+    return "Invalid phone number";
+  } else {
+    const avatarFilePath = `/public/pictures/${avatar}`;
+    return `Contact saved! Name: ${name}, Phone number: ${phoneNumber}, Avatar: ${avatarFilePath}`;
   }
-
-  // don't touch above this line
-
-  return isValidLength(message);
 }
 
 // don't touch below this line
 
-export { getMessageStatus };
+export { createContact };
