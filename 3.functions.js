@@ -85,20 +85,27 @@
 //   "Such a lovely place",
 //   "Plenty of room at the Hotel California",
 // );
+//
+// function createContact(
+//   phoneNumber,
+//   name = "Anonymous",
+//   avatar = "default.jpg",
+// ) {
+//   if (!phoneNumber) {
+//     return "Invalid phone number";
+//   } else {
+//     const avatarFilePath = `/public/pictures/${avatar}`;
+//     return `Contact saved! Name: ${name}, Phone number: ${phoneNumber}, Avatar: ${avatarFilePath}`;
+//   }
+// }
+//
+// // don't touch below this line
+// export { createContact };
 
-function createContact(
-  phoneNumber,
-  name = "Anonymous",
-  avatar = "default.jpg",
-) {
-  if (!phoneNumber) {
-    return "Invalid phone number";
-  } else {
-    const avatarFilePath = `/public/pictures/${avatar}`;
-    return `Contact saved! Name: ${name}, Phone number: ${phoneNumber}, Avatar: ${avatarFilePath}`;
-  }
-}
+const total = (function calculateTotal(numMessages, bytesPerMessage) {
+  return numMessages * bytesPerMessage;
+})(100, 24);
 
 // don't touch below this line
 
-export { createContact };
+console.log("Total message cost:", total);
