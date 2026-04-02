@@ -1,21 +1,27 @@
 const campaign = {
-  /* this is an object method and not a function. 
-  just has the same structure as one*/
   name: "Welcome Campaign",
-  maxMessages: 100,
+  maxMessages: 33,
   sentMessages: 30,
-  getRemainingMessages() {
-    return this.maxMessages - this.sentMessages;
+  sendMessage() {
+    if (this.maxMessages > this.sentMessages) {
+      this.sentMessages++;
+      return `${this.maxMessages - this.sentMessages} messages remaining `;
+    }
+    return "Out of messages";
   },
 };
 
-const test = function () {
-  while (campaign.sentMessages < campaign.maxMessages) {
-    campaign.sentMessages++;
-    console.log(campaign.getRemainingMessages());
-  }
-  console.log("Out of messages!");
-};
+console.log(campaign);
+campaign.sendMessage();
+console.log(campaign.sentMessages);
+campaign.sendMessage();
+console.log(campaign.sentMessages);
+campaign.sendMessage();
+console.log(campaign.sentMessages);
+campaign.sendMessage();
+console.log(campaign.sentMessages);
+campaign.sendMessage();
+console.log(campaign.sentMessages);
+// don't touch below this line
 
-test();
 export { campaign };
