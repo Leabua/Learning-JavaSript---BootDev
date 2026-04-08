@@ -24,3 +24,4 @@ function printPrimes(max) {
 }
 
 printPrimes(10000000);
+console.log("This was JavaScript");
