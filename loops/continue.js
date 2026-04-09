@@ -2,7 +2,7 @@ function printPrimes(max) {
   for (let n = 2; n <= max; n++) {
     if (n === 2) {
       console.log(n);
-      continue; // fix 1: skip the rest for n=2
+      continue;
     }
     if (n % 2 === 0) {
       continue;
