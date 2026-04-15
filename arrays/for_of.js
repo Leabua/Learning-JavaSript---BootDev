@@ -41,6 +41,7 @@ const tests = [
 
 const testFunction = (messages, badWord, expected) => {
   if (
+    // Nb on the JSON.stringify
     JSON.stringify(getCleanMessages(messages, badWord)) ===
     JSON.stringify(expected)
   ) {
