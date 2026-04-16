@@ -1,6 +1,8 @@
+// This throws an error in console if longer than  limit
 const sendMessage = (msg) => {
-  if (msg.length > 70) {
-    throw new Error("Message is too long");
+  const limit = 70;
+  if (msg.length > limit) {
+    throw new Error("Message is too long.");
   }
   return msg;
 };
