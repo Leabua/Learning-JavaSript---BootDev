@@ -1,5 +1,5 @@
-function moo(name) {
+const moo = (name) => {
   return `moo, ${name}`;
-}
+};
 
-export { moo };
+module.export = { moo };
